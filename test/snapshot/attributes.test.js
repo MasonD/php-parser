@@ -212,4 +212,13 @@ describe("Parse Attributes", () => {
       )
     ).toMatchSnapshot();
   });
+
+  it("parses operators in attributes", () => {
+    expect(
+      parser.parseEval(`
+      #[Att1(1 | 2)]
+      class a {}
+      `)
+    )
+  })
 });
